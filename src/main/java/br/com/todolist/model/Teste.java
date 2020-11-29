@@ -22,6 +22,8 @@ public class Teste implements Serializable {
 	private int cpf;
 	
 	private Date dataNascimento;
+	
+	private String usuario;
 
 	public Long getId() {
 		return id;

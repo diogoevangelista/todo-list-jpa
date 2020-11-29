@@ -23,8 +23,7 @@ public class Usuario implements Serializable {
 		this.nome = nome;
 	}
 
-	public Usuario() {
-	}
+	public Usuario() {}
 
 	public long getId() {
 		return id;

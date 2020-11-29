@@ -15,17 +15,15 @@ public class Local implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	private String nome;
 
-	public Local() {
-	}
-
 	public Local(long id, String nome) {
-		super();
 		this.id = id;
 		this.nome = nome;
 	}
+
+	public Local() {}
 
 	public long getId() {
 		return id;
