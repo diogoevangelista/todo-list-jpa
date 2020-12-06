@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -19,7 +20,7 @@ public class ListaTarefa implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@Column(name = "descricao", nullable = false, length = 120)
@@ -51,7 +52,7 @@ public class ListaTarefa implements Serializable {
 	@Enumerated(EnumType.ORDINAL)
 	@Column(name = "status_tarefa")
 	private StatusTarefa statusTarefa;
-	
+
 	@ManyToOne
 	private Usuario usuario;
 
@@ -114,6 +115,14 @@ public class ListaTarefa implements Serializable {
 
 	public void setObservacao(String observacao) {
 		this.observacao = observacao;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 	@Override
