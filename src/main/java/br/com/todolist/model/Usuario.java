@@ -21,7 +21,7 @@ public class Usuario implements Serializable {
 
 	private String nome;
 
-	@OneToMany(mappeBy = "usuario", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 	private List<ListaTarefa> listaTarefas;
 
 	public Usuario(long id, String nome) {
