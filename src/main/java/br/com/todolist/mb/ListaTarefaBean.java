@@ -8,6 +8,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import br.com.todolist.model.ListaTarefa;
+import br.com.todolist.model.StatusTarefa;
 import br.com.todolist.repositories.ListaTarefaRepository;
 
 @Named
@@ -44,4 +45,7 @@ public class ListaTarefaBean implements Serializable {
 		return novaTarefa;
 	}
 
+	public StatusTarefa[] getStatusTarefa() {
+		return StatusTarefa.values();
+	}
 }
